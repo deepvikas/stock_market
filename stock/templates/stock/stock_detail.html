@@ -1,0 +1,13 @@
+{% extends "stock/base.html" %}
+{% block content %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ object.title }}</a>
+                <small class="text-muted">{{ object.name }}</small>
+            </div>
+            <!-- <h2><a class="article-title" href="#">{{ post.title }}</a></h2> -->
+            <p class="article-content">Price {{ object.price }} INR on {{ object.date_posted|date:"F d, Y" }}</p>
+        </div>
+    </article>
+{% endblock content %}

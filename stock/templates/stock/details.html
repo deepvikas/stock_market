@@ -1,0 +1,23 @@
+{% extends "stock/base.html" %}
+{% block content %}
+    <div id="content-container">
+        {% for stock in stocks %}
+            <article class="media content-section" id="stock_{{ stock.id }}">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="{% url 'stock-details-view' stock.id %}">{{ stock.title }}</a>
+                        <small class="text-muted">{{ stock.name }}</small>
+                    </div>
+                    <!-- <h2><a class="article-title" href="#">{{ post.title }}</a></h2> -->
+                    <p class="article-content">Price {{ stock.price }} INR on {{ stock.date_posted}}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+    {% if total_obj > 5 %}
+        <div class="load-more-btn mt-3 d-flex" id="btn">
+            <button type="success" class="btn btn-success" style="display: block;" id="load_more">Load More</button>
+            <button type="info" class="btn btn-info" id="show_less" style="display: none; margin-left:1%;">Show Less</button>
+        </div>
+    {% endif %}
+{% endblock content %}
