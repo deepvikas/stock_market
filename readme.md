@@ -11,5 +11,5 @@ I have also added New Stock creation page using StockCreateView
 Also showed Stock Detail View by using StockDetailView.
 Added Load more button in stock detail list view.
 Load more button will only be visible when stock entries exceed 5.
-After click on Load more button and ajax request will get the other 5 entries from db and will append them to existing div.
+After click on Load more button and ajax request will get the other 5 entries from db and will append them to existing div
 
